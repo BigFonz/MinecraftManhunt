@@ -27,7 +27,7 @@ repositories {
 }
 
 shadowJar {
-    destinationDirectory.set(file("C:\\Users\\lachl\\OneDrive\\Documents\\MinecraftServer\\plugins"))
+    destinationDirectory.set(file("REDACTED"))
 }
 
 dependencies {
