@@ -1,4 +1,4 @@
-package lobbyHandler;
+package com.foenixe.manhunt.lobbyHandler;
 
 import com.foenixe.manhunt.MinecraftManhunt;
 import org.bukkit.GameMode;
