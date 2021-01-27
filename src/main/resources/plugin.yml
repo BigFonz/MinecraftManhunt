@@ -1,0 +1,7 @@
+name: MinecraftManhunt
+version: @version@
+main: com.foenixe.manhunt.MinecraftManhunt
+api-version: 1.16
+depend: [WorldEdit]
+commands:
+  role:

@@ -1,0 +1,43 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id "com.github.johnrengelman.shadow" version "5.1.0"
+    id 'java'
+}
+
+group = 'com.foenixe.manhunt'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'spigotmc-repo'
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    maven {
+        name = 'enginehub-maven'
+        url = "http://maven.enginehub.org/repo/"
+    }
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+}
+
+shadowJar {
+    destinationDirectory.set(file("C:\\Users\\lachl\\OneDrive\\Documents\\MinecraftServer\\plugins"))
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT'
+
+    compileOnly 'com.sk89q.worldedit:worldedit-bukkit:7.2.0-SNAPSHOT'
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}
