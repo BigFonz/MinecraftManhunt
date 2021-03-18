@@ -1,6 +1,5 @@
 package com.foenixe.manhunt;
 
-import com.foenixe.manhunt.test.RoleCommand;
 import com.sk89q.worldedit.EditSession;
 import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.WorldEditException;
@@ -35,10 +34,6 @@ public final class MinecraftManhunt extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new TrackerCompass(this), this);
         loadLobby();
-
-        //test
-        getCommand("role").setExecutor(new RoleCommand(this));
-
     }
 
     public GameManager getManager() {

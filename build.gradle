@@ -26,14 +26,10 @@ repositories {
     }
 }
 
-shadowJar {
-    destinationDirectory.set(file("REDACTED"))
-}
-
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT'
 
-    compileOnly 'com.sk89q.worldedit:worldedit-bukkit:7.2.0-SNAPSHOT'
+    compileOnly 'com.sk89q.worldedit:worldedit-bukkit:7.3.0-SNAPSHOT'
 }
 
 processResources {
